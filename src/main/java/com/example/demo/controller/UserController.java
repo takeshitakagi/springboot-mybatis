@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+//git 練習
+
 import java.util.List;
 
 import javax.validation.Valid;
@@ -33,11 +35,11 @@ public class UserController {
 	/**
 	 * 一覧画面の表示
 	 */
-	@GetMapping
-	public String getUsers(Model model) {
-		List<User> users = userMapper.selectAll();
-		model.addAttribute("users", users);
-		return "users/list";
+	@GetMapping // URLが/usersの時下のgetUsersメソッドが呼び出される
+	public String getUsers(Model model) { // ここのmodelはなんですか？
+		List<User> users = userMapper.selectAll(); // usersリストにuserの全てがselectされる、sql文はUserMapperに書かれたもの
+		model.addAttribute("users", users); //list.htmlの変数usersの中に上のusersリストを入れる
+		return "users/list"; // list.htmlを返す
 	}
 
 	/**
