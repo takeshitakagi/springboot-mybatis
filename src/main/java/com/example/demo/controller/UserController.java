@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-//git 練習
+//git 練習 2回目
 
 import java.util.List;
 
